@@ -1,0 +1,66 @@
+{
+   "moduleName": "Webtoon",
+   "moduleInitials": "WT",
+   "moduleDesc": "A module for webtoons.com/en/",
+   "developer": "Hooman with help from DarkZCore",
+   "moduleID": "11302",
+   "moduleImage": "https://i0.wp.com/bloggers.society19.com/wp-content/uploads/2015/11/Webtoon.png?resize=512%2C512&ssl=1",
+   "moduleVersion": "1.0",
+   "moduleLenguage": "ENG",
+   "moduleHasImages": "true",
+   "outputType": "image",
+   "randomizeUserAgent": "false",
+   "baseURL": "https://www.webtoons.com/en",
+   "blackListed": [""],
+   "mainPage": [
+       {
+           "request": "https://www.webtoons.com/en",
+           "method": "get",
+           "headers": [{ "key": "referer", "value": "https://www.webtoons.com/en/genre" }],
+           "extraInfo": [
+               { "value": "0" },
+               { "value": "https://www.webtoons.com/en/romance" },
+               { "value": "https://www.webtoons.com/en/fantasy" },
+               { "value": "https://www.webtoons.com/en/action" },
+               { "value": "https://www.webtoons.com/en/comedy" }
+           ],
+           "loadJavascript": "false",
+           "javaScript": " function Header(key, value){ this.key = key; this.value = value; } function ExtraInfo(value){ this.value = value; } function Output(sectionName, mangasArray){ this.sectionName = sectionName; this.mangasArray = mangasArray; } function MangasArray(moduleID, image, link, title){ this.moduleID = moduleID; this.image = image; this.link = link; this.title = title; } function MainPageObject(request, headers, method, extraInfo, loadJavascript, javaScript, output){ this.request = request; this.headers = headers; this.method = method; this.extraInfo = extraInfo; this.loadJavascript = loadJavascript; this.javaScript = javaScript; this.output = output; } function shuffle(a) { var j, x, i; for (i = a.length - 1; i > 0; i--){ j = Math.floor(Math.random() * (i + 1)); x = a[i]; a[i] = a[j]; a[j] = x; } return a; } var savedData = document.getElementById('katsu-final-data'); var parsedJson = JSON.parse(savedData.innerHTML); var moduleID = '11302'; var headers = [new Header('Referer','https://www.webtoons.com/en/genre')]; var extraInfo = []; var currentPos = parseInt(parsedJson.extraInfo[0].value); var mainPageObject; var output = []; var sectionName = ''; var nextRequest = ''; try { nextRequest = parsedJson.extraInfo[currentPos + 1].value; }catch (e) { console.log(e); } if (currentPos != 0) { output = parsedJson.output; } var mangasArray = []; if(parsedJson.request == 'https://www.webtoons.com/en') { var data = document.querySelector('.card_lst').querySelectorAll('li > a'); for (let i = 0;i<data.length;i++) { let webtoon = data[i]; let link = webtoon.href; let title= webtoon.querySelector('.subj').innerText; let image = webtoon.querySelector('.card_front > img').src; mangasArray.push(new MangasArray(moduleID,image,link,title)); } } else{ switch(parseInt(parsedJson.extraInfo[0].value)){ case 1: var test = document.querySelectorAll('ul.card_lst'); var arr1 = test[5].querySelectorAll('li > a'); for(let i=0;i<arr1.length;i++){ let t = arr1[i]; let image = t.querySelector('img').src; let link = t.href; let title= t.querySelector('.subj').innerText; mangasArray.push(new MangasArray(moduleID,image,link,title)); } sectionName = 'Romance'; break; case 2: var test = document.querySelectorAll('ul.card_lst'); var arr1 = test[1].querySelectorAll('li > a'); for(let i=0;i<arr1.length;i++){ let t = arr1[i]; let image = t.querySelector('img').src; let link = t.href; let title= t.querySelector('.subj').innerText; mangasArray.push(new MangasArray(moduleID,image,link,title)); } sectionName = 'Fantasy'; break; case 3: var test = document.querySelectorAll('ul.card_lst'); var arr1 = test[3].querySelectorAll('li > a'); var arr2 = test[4].querySelectorAll('li > a'); for(let i=0;i<arr1.length;i++){ let t = arr1[i]; let image = t.querySelector('img').src; let link = t.href; let title= t.querySelector('.subj').innerText; mangasArray.push(new MangasArray(moduleID,image,link,title)); } for(let i=0;i<arr2.length;i++){ let t = arr2[i]; let image = t.querySelector('img').src; let link = t.href; let title= t.querySelector('.subj').innerText; mangasArray.push(new MangasArray(moduleID,image,link,title)); } sectionName = 'Action'; break; case 4: var test = document.querySelectorAll('ul.card_lst'); var arr1 = test[2].querySelectorAll('li > a'); for(let i=0;i<arr1.length;i++){ let t = arr1[i]; let image = t.querySelector('img').src; let link = t.href; let title= t.querySelector('.subj').innerText; mangasArray.push(new MangasArray(moduleID,image,link,title)); } sectionName = 'Comedy'; break; } } output.push(new Output(sectionName, mangasArray)); for (var x = 0; x < parsedJson.extraInfo.length; x++) { var object = new ExtraInfo(parsedJson.extraInfo[x].value); extraInfo.push(object); } extraInfo[0].value = '' + (currentPos + 1); mainPageObject = new MainPageObject(nextRequest, headers, '', extraInfo, '', '', output); var finalJson = JSON.stringify(mainPageObject); savedData.innerHTML = finalJson;",
+           "output": [{ "sectionName": "", "mangasArray": [{ "moduleID": "", "image": "", "link": "", "title": "" }] }]
+       }
+   ],
+   "search": [
+       {
+           "request": "https://www.webtoons.com/en/search?keyword=<searched>&searchType=WEBTOON&page=<page>",
+           "method": "get",
+           "headers": [{ "key": "", "value": "" }],
+           "separator": "+",
+           "extraInfo": [{ "value": "" }],
+           "loadJavascript": "false",
+           "javaScript": "",
+           "output": [{ "moduleID": "0", "image": "", "link": "", "title": "", "type": "", "voice": "", "stars": "" }]
+       }
+   ],
+   "info": [
+       {
+           "request": "get",
+           "method": "get",
+           "headers": [{ "key": "", "value": "" }],
+           "extraInfo": [{ "value": "" }],
+           "loadJavascript": "false",
+           "javaScript": "",
+           "output": { "moduleID": "0", "image": "", "link": "", "title": "", "description": "", "genres": [""], "type": "", "status": "", "chapters": [{ "link": "", "moduleID": "" }] }
+       }
+   ],
+   "chapters": [
+       {
+           "request": "",
+           "method": "get",
+           "headers": [{ "key": "key", "value": "value" }],
+           "extraInfo": [{ "value": "" }],
+           "loadJavascript": "false",
+           "javaScript": "",
+           "output": [{ "link": "", "moduleID": "", "headers": [{ "key": "key", "value": "value" }] }]
+       }
+   ]
+}
