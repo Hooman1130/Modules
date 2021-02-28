@@ -369,7 +369,7 @@
     var currentPos = parseInt(parsedJson.extraInfo[0].value);
     var mainPageObject;
     var output = [];
-    var sectionName = document.querySelector('div.col-md-8 > h2').innerText;
+    if (document.querySelector('div.col-md-8 > h2') != null) { var sectionName = document.querySelector('div.col-md-8 > h2').innerText;} else {var sectionName = '';}
     var nextRequest = '';
     
     try {
