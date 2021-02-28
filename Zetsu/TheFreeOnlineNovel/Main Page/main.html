@@ -369,7 +369,7 @@
     var currentPos = parseInt(parsedJson.extraInfo[0].value);
     var mainPageObject;
     var output = [];
-    var sectionName = '';
+    var sectionName = document.querySelector('div.col-md-8 > h2').innerText;
     var nextRequest = '';
     
     try {
@@ -383,8 +383,6 @@
     }
     
     var mangasArray = [];
-
-
     var data = document.querySelector('nav.homebook').querySelectorAll('li');
     
     for (let i = 0; i<data.length; i++) {
@@ -395,17 +393,6 @@
         console.log(book, link, title, image);
         mangasArray.push(new MangasArray(moduleID, image, link, title));
     }
-
-
-
-
-
-
-
-
-
-
-
     output.push(new Output(sectionName, mangasArray));
     for (var x = 0; x < parsedJson.extraInfo.length; x++) {
         var object = new ExtraInfo(parsedJson.extraInfo[x].value);
@@ -418,7 +405,3 @@
     </script>
  </body>
 </html>
-
-
-
-
