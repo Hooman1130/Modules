@@ -1,39 +1,258 @@
- <script>
-     function Header(key,value) {
-         this.key = key; 
-         this.value = value;
-     } 
-     function ExtraInfo(value) { 
-         this.value = value;
-     } 
-     function Output(moduleID,image,link,title,type,voice,stars) {
-         this.moduleID = moduleID; 
-         this.image = image;
-         this.link = link;
-         this.title = title; 
-         this.type = type;
-         this.voice = voice;
-         this.stars = stars;
-     } 
-     function SearchObject(request,method,headers,separator,extraInfo,loadJavascript,javaScript,output) {
-         this.request = request;
-         this.method = method;
-         this.headers = headers;
-         this.separator = separator;
-         this.extraInfo = extraInfo;
-         this.loadJavascript = loadJavascript;
-         this.javaScript = javaScript;
-         this.output = output; 
-     } 
-     var savedData = document.getElementById('katsu-final-data'); 
-     var parsedJson = JSON.parse(savedData.innerHTML);
-     var moduleID = ''; 
-     var headers = [new Header('','')]; 
-     var extraInfo = [new ExtraInfo('')];
-     var searchPageObject;
-     var output = []; 
-     
-     searchPageObject = new SearchObject('','',headers,'+',extraInfo,'','',output);
-     var finalJson = JSON.stringify(searchPageObject);
-     savedData.innerHTML = finalJson;
-</script>
+<html>
+    <head>
+     <title>Search Result Of Stephen King - thefreeonlinenovel.com</title>
+     <meta name="depion" content="Search Result Of Stephen King - thefreeonlinenovel.com">
+     <meta name="keywords" content="Search Result Of Stephen King - thefreeonlinenovel.com">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" type="text/css" href="/asstes/css/css1.css?1">
+     <link rel="stylesheet" type="text/css" href="/asstes/css/style.css?1">
+     <link rel="stylesheet" type="text/css" href="/asstes/css/css.css?1">
+     <link rel="stylesheet" type="text/css" href="/asstes/css/1.css?1">
+     <link rel="stylesheet" type="text/css" href="/asstes/css/bootstrap-overwrite.css">
+    </head>
+    <body>
+     <div id="katsu-final-data">
+      {"method":"get","output":[{"moduleID":"0","title":"","image":"","link":"","stars":"","voice":"","type":""}],"separator":"%20","loadJavascript":"false","headers":[{"key":"","value":""}],"javaScript":"","request":"http:\/\/thefreeonlinenovel.com\/search\/Stephen%20King","extraInfo":[{"value":""}]}
+     </div>
+     <p src="/asstes/js/jquery.js"></p>
+     <p src="/asstes/js/bootstrap.js"></p>
+     <div class="header">
+      <div class="navbar navbar-inverse ">
+       <div class="container">
+        <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+         <a class="navbar-brand" href="/"><img class="bnav" src="/asstes/imgs/logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+         <ul class="nav navbar-nav _nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/latest_update">Latest Update</a></li>
+          <li><a href="/g/adventure">Adventure</a></li>
+          <li><a href="/g/christian">Christian</a></li>
+          <li><a href="/g/fantasy">Fantasy</a></li>
+          <li><a href="/g/historical">Historical</a></li>
+          <li><a href="/g/horror">Horror</a></li>
+          <li><a href="/g/humorous">Humorous</a></li>
+          <li><a href="/g/mystery">Mystery</a></li>
+          <li><a href="/g/romance">Romance</a></li>
+          <li><a href="/g/science_fiction">Science Fiction</a></li>
+          <li><a href="/g/thriller">Thriller</a></li>
+          <li><a href="/g/western">Western</a></li>
+          <li><a href="/g/young_adult">Young Adult</a></li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="main">
+      <div class="row bgStyle4">
+       <div class="col-md-2 visible-md visible-lg">
+        <a href="/series"><b>Top Books</b></a>
+        <ul>
+         <li><a class="AuthorLeftItem" href="/b/prey">Prey</a></li>
+         <li><a class="AuthorLeftItem" href="/b/sphere">Sphere</a></li>
+         <li><a class="AuthorLeftItem" href="/b/black_rose">Black Rose</a></li>
+         <li><a class="AuthorLeftItem" href="/b/the_great_train_robbery">The Great Train Robbery</a></li>
+         <li><a class="AuthorLeftItem" href="/b/blue_dahlia">Blue Dahlia</a></li>
+         <li><a class="AuthorLeftItem" href="/b/carnal_innocence">Carnal Innocence</a></li>
+         <li><a class="AuthorLeftItem" href="/b/dance_upon_the_air">Dance Upon the Air</a></li>
+         <li><a class="AuthorLeftItem" href="/b/high_noon">High Noon</a></li>
+         <li><a class="AuthorLeftItem" href="/b/lawless">Lawless</a></li>
+         <li><a class="AuthorLeftItem" href="/b/sacred_sins">Sacred Sins</a></li>
+         <li><a class="AuthorLeftItem" href="/b/tribute">Tribute</a></li>
+         <li><a class="AuthorLeftItem" href="/b/face_the_fire">Face the Fire</a></li>
+         <li><a class="AuthorLeftItem" href="/b/holding_the_dream">Holding the Dream</a></li>
+         <li><a class="AuthorLeftItem" href="/b/a_man_for_amanda">A Man for Amanda</a></li>
+         <li><a class="AuthorLeftItem" href="/b/all_the_possibilities">All the Possibilities</a></li>
+         <li><a class="AuthorLeftItem" href="/b/next">Next</a></li>
+         <li><a class="AuthorLeftItem" href="/b/prey">Prey</a></li>
+         <li><a class="AuthorLeftItem" href="/b/sphere">Sphere</a></li>
+         <li><a class="AuthorLeftItem" href="/b/black_rose">Black Rose</a></li>
+         <li><a class="AuthorLeftItem" href="/b/the_great_train_robbery">The Great Train Robbery</a></li>
+         <li><a class="AuthorLeftItem" href="/b/blue_dahlia">Blue Dahlia</a></li>
+         <li><a class="AuthorLeftItem" href="/b/carnal_innocence">Carnal Innocence</a></li>
+         <li><a class="AuthorLeftItem" href="/b/dance_upon_the_air">Dance Upon the Air</a></li>
+         <li><a class="AuthorLeftItem" href="/b/high_noon">High Noon</a></li>
+         <li><a class="AuthorLeftItem" href="/b/lawless">Lawless</a></li>
+         <li><a class="AuthorLeftItem" href="/b/sacred_sins">Sacred Sins</a></li>
+         <li><a class="AuthorLeftItem" href="/b/tribute">Tribute</a></li>
+         <li><a class="AuthorLeftItem" href="/b/face_the_fire">Face the Fire</a></li>
+         <li><a class="AuthorLeftItem" href="/b/holding_the_dream">Holding the Dream</a></li>
+         <li><a class="AuthorLeftItem" href="/b/a_man_for_amanda">A Man for Amanda</a></li>
+        </ul>
+       </div>
+       <div class="col-md-8">
+        <div class="row SearchTool _w100">
+         <form method="get" onsubmit="location.href='/search/'+document.querySelector('#searchName').value;return false;">
+          <div class="SearchBox LeftAddon">
+           <img src="/asstes/imgs/search.png">
+           <input required type="text" class="form-control _search" id="searchStringId" name="searchString">
+          </div>
+          <div>
+           <button class="btn btn-default RoundButton NeutralButton HasSmallLeftMargin">SEARCH</button>
+          </div>
+         </form>
+        </div>
+        <h2>search: Stephen King Books</h2>
+        <nav class="homebook" aria-hidden="false">
+         <ul>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/bag_of_bones"><img class="img4" src="/uploads/truyen/Bag of Bones.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="Bag of Bones"></a>
+           </center><a class="page-scroll" href="/bag_of_bones">Bag of Bones</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/black_house"><img class="img4" src="/uploads/truyen/Black House.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="Black House"></a>
+           </center><a class="page-scroll" href="/black_house">Black House</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/carrie"><img class="img4" src="/uploads/truyen/Carrie.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="Carrie"></a>
+           </center><a class="page-scroll" href="/carrie">Carrie</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/salem_s_lot"><img class="img4" src="/uploads/truyen/Salems-Lot.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="'Salem's Lot"></a>
+           </center><a class="page-scroll" href="/salem_s_lot">'Salem's Lot</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_shining"><img class="img4" src="/uploads/truyen/The-Shining.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Shining"></a>
+           </center><a class="page-scroll" href="/the_shining">The Shining</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_little_sisters_of_eluria"><img class="img4" src="/uploads/truyen/The-Little-Sisters-of-Eluria.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Little Sisters of Eluria"></a>
+           </center><a class="page-scroll" href="/the_little_sisters_of_eluria">The Little Sisters of Eluria</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_gunslinger"><img class="img4" src="/uploads/truyen/The-Gunslinger.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Gunslinger"></a>
+           </center><a class="page-scroll" href="/the_gunslinger">The Gunslinger</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_drawing_of_the_three"><img class="img4" src="/uploads/truyen/The-Drawing-of-the-Three.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Drawing of the Three"></a>
+           </center><a class="page-scroll" href="/the_drawing_of_the_three">The Drawing of the Three</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_waste_lands"><img class="img4" src="/uploads/truyen/The-Waste-Lands.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Waste Lands"></a>
+           </center><a class="page-scroll" href="/the_waste_lands">The Waste Lands</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/wizard_and_glass"><img class="img4" src="/uploads/truyen/Wizard-and-Glass.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="Wizard and Glass"></a>
+           </center><a class="page-scroll" href="/wizard_and_glass">Wizard and Glass</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/song_of_susannah"><img class="img4" src="/uploads/truyen/Song-of-Susannah.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="Song of Susannah"></a>
+           </center><a class="page-scroll" href="/song_of_susannah">Song of Susannah</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_dark_tower"><img class="img4" src="/uploads/truyen/The-Dark-Tower.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Dark Tower"></a>
+           </center><a class="page-scroll" href="/the_dark_tower">The Dark Tower</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_dead_zone"><img class="img4" src="/uploads/truyen/The-Dead-Zone.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Dead Zone"></a>
+           </center><a class="page-scroll" href="/the_dead_zone">The Dead Zone</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/misery"><img class="img4" src="/uploads/truyen/Misery.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="Misery"></a>
+           </center><a class="page-scroll" href="/misery">Misery</a></li>
+          <li class="thumli">
+           <center>
+            <a class="ulullili" href="/b/the_girl_who_loved_tom_gordon"><img class="img4" src="/uploads/truyen/The-Girl-Who-Loved-Tom-Gordon.jpg" onerror="this.src='/asstes/imgs/nocover.png'" alt="The Girl Who Loved Tom Gordon"></a>
+           </center><a class="page-scroll" href="/the_girl_who_loved_tom_gordon">The Girl Who Loved Tom Gordon</a></li>
+         </ul>
+         <br>
+        </nav>
+       </div>
+       <div class="col-md-2 visible-md visible-lg">
+        <a href="/authors"><b>Latest Update</b></a>
+        <ul>
+         <li><a class="AuthorLeftItem" href="/b/the_loners">The Loners</a></li>
+         <li><a class="AuthorLeftItem" href="/b/the_saints">The Saints</a></li>
+         <li><a class="AuthorLeftItem" href="/b/switched">Switched</a></li>
+         <li><a class="AuthorLeftItem" href="/b/fangtastic">Fangtastic!</a></li>
+         <li><a class="AuthorLeftItem" href="/b/re_vamped">Re-Vamped!</a></li>
+         <li><a class="AuthorLeftItem" href="/b/vampalicious">Vampalicious!</a></li>
+         <li><a class="AuthorLeftItem" href="/b/tome_of_the_undergates">Tome of the Undergates</a></li>
+         <li><a class="AuthorLeftItem" href="/b/black_halo">Black Halo</a></li>
+         <li><a class="AuthorLeftItem" href="/b/the_skybound_sea">The Skybound Sea</a></li>
+         <li><a class="AuthorLeftItem" href="/b/if_you_stay">If You Stay</a></li>
+         <li><a class="AuthorLeftItem" href="/b/if_you_leave">If You Leave</a></li>
+         <li><a class="AuthorLeftItem" href="/b/until_we_burn">Until We Burn</a></li>
+         <li><a class="AuthorLeftItem" href="/b/before_we_fall">Before We Fall</a></li>
+         <li><a class="AuthorLeftItem" href="/b/every_last_kiss">Every Last Kiss</a></li>
+         <li><a class="AuthorLeftItem" href="/b/fated">Fated</a></li>
+         <li><a class="AuthorLeftItem" href="/b/suspiciously_obedient">Suspiciously Obedient</a></li>
+         <li><a class="AuthorLeftItem" href="/b/random_acts_of_crazy">Random Acts of Crazy</a></li>
+         <li><a class="AuthorLeftItem" href="/b/random_acts_of_trust">Random Acts of Trust</a></li>
+         <li><a class="AuthorLeftItem" href="/b/her_first_billionaire">Her First Billionaire</a></li>
+         <li><a class="AuthorLeftItem" href="/b/her_second_billionaire">Her Second Billionaire</a></li>
+         <li><a class="AuthorLeftItem" href="/b/her_two_billionaires">Her Two Billionaires</a></li>
+         <li><a class="AuthorLeftItem" href="/b/her_two_billionaires_and_a_baby">Her Two Billionaires and a Baby</a></li>
+         <li><a class="AuthorLeftItem" href="/b/his_majesty_s_dragon">His Majesty's Dragon</a></li>
+         <li><a class="AuthorLeftItem" href="/b/throne_of_jade">Throne of Jade</a></li>
+         <li><a class="AuthorLeftItem" href="/b/black_powder_war">Black Powder War</a></li>
+         <li><a class="AuthorLeftItem" href="/b/victory_of_eagles">Victory of Eagles</a></li>
+         <li><a class="AuthorLeftItem" href="/b/tongues_of_serpents">Tongues of Serpents</a></li>
+         <li><a class="AuthorLeftItem" href="/b/empire_of_ivory">Empire of Ivory</a></li>
+         <li><a class="AuthorLeftItem" href="/b/crucible_of_gold">Crucible of Gold</a></li>
+         <li><a class="AuthorLeftItem" href="/b/delirium">Delirium</a></li>
+        </ul>
+        <br>
+        <div class="fb-like" data-href="/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        <br>
+       </div>
+      </div>
+     </div>
+     <div class="foot">
+       Copyright © novelfull thefreeonlinenovel.com All Rights Reserved. 
+     </div>
+     <p src="/j/ads.js?106" type="text/javap"></p>
+     <script>
+        function Header(key,value) {
+            this.key = key; 
+            this.value = value;
+        } 
+        function ExtraInfo(value) { 
+            this.value = value;
+        } 
+        function Output(moduleID,image,link,title,type,voice,stars) {
+            this.moduleID = moduleID; 
+            this.image = image;
+            this.link = link;
+            this.title = title; 
+            this.type = type;
+            this.voice = voice;
+            this.stars = stars;
+        } 
+        function SearchObject(request,method,headers,separator,extraInfo,loadJavascript,javaScript,output) {
+            this.request = request;
+            this.method = method;
+            this.headers = headers;
+            this.separator = separator;
+            this.extraInfo = extraInfo;
+            this.loadJavascript = loadJavascript;
+            this.javaScript = javaScript;
+            this.output = output; 
+        } 
+        var savedData = document.getElementById('katsu-final-data'); 
+        var parsedJson = JSON.parse(savedData.innerHTML);
+        var moduleID = '113022'; 
+        var headers = [new Header('','')]; 
+        var extraInfo = [new ExtraInfo('')];
+        var searchPageObject;
+        var output = []; 
+
+        var data = document.querySelector('div.col-md-8 > nav.homebook > ul').querySelectorAll('li > center > a');
+        for(var x = 0; x <data.length; x++){
+            let image = 'http://thefreeonlinenovel.com'+data[x].querySelector('img').src;
+            let link = 'http://thefreeonlinenovel.com'+data[x].href;
+            let title = data[x].querySelector('img').alt;
+            let type = 'Book';
+            let stars = '';
+            let voice = '';
+            output.push(new Output(moduleID, image, link, title, type, voice, stars));
+        }
+        searchPageObject = new SearchObject('','',headers,'+',extraInfo,'','',output);
+        var finalJson = JSON.stringify(searchPageObject);
+        savedData.innerHTML = finalJson;
+   </script>
+    </body>
+   </html>
