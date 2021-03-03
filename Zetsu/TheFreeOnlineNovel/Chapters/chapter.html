@@ -181,7 +181,7 @@
     var data = document.querySelector('td').querySelectorAll('p');
     for (let x = 0; x < data.length; x++) {
         var text = data[x].innerText;
-        finalText = finalText + '\n\n' + text;
+        finalText = finalText + '<p><br></p>' + text;
     }
     output.push(new Output(finalText, moduleID, headers));
     chaptersObject = new ChaptersObject('', '', headers, extraInfo, '', '', output);
