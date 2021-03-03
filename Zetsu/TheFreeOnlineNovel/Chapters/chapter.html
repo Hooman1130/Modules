@@ -170,7 +170,7 @@
         this.javaScript = javaScript;
         this.output = output;
     }
-    var savedData = document.getElementById('katsu-final-data');
+    var savedData = document.querySelector('#katsu-final-data');
     var parsedJson = JSON.parse(savedData.innerHTML);
     var moduleID = '113022';
     var headers = [new Header('', '')];
@@ -179,10 +179,10 @@
     var output = [];
     var finalText = '';
     var data = document.querySelector('td').querySelectorAll('p');
-        for (let x = 0; x < data.length; x++) {
-            var text = data[x].innerText;
-            finalText = finalText + '\n' + text;
-        }
+    for (let x = 0; x < data.length; x++) {
+        var text = data[x].innerText;
+        finalText = finalText + '\n\n' + text;
+    }
     output.push(new Output(finalText, moduleID, headers));
     chaptersObject = new ChaptersObject('', '', headers, extraInfo, '', '', output);
     var finalJson = JSON.stringify(chaptersObject);
