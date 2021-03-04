@@ -178,11 +178,9 @@
     var chaptersObject;
     var output = [];
     var finalText = '';
-    var data = document.querySelector('td').querySelectorAll('p');
-    for (let x = 0; x < data.length; x++) {
-        var text = data[x].innerText;
-        finalText = finalText + '<p><br></p>' + text;
-    }
+    document.querySelector('.col-md-8 a').remove();
+    var finalText = document.querySelector('.col-md-8').innerText;
+    console.log(finalText);
     output.push(new Output(finalText, moduleID, headers));
     chaptersObject = new ChaptersObject('', '', headers, extraInfo, '', '', output);
     var finalJson = JSON.stringify(chaptersObject);
