@@ -1,0 +1,79 @@
+<script  type="text/javascript">
+  function Header(key,value) {
+      this.key = key;
+      this.value = value;
+  }
+
+  function ExtraInfo(value) {
+      this.value = value;
+  }
+
+  function Output(lastEpisodes,lastAnimes) {
+      this.lastEpisodes = lastEpisodes;
+      this.lastAnimes = lastAnimes;
+  }
+
+  function LastAnimes(moduleID,image,link,title) {
+      this.moduleID = moduleID;
+      this.image = image;
+      this.link = link;
+      this.title = title;
+  }
+
+  function LastEpisodes(moduleID,image,link,title,episode) {
+      this.moduleID = moduleID;
+      this.image = image;
+      this.link = link;
+      this.title = title;
+      this.episode = episode;
+  }
+
+  function MainPageObject(request,headers,method,extraInfo,loadJavascript,javaScript,output) {
+      this.request = request;
+      this.headers = headers;
+      this.method = method;
+      this.extraInfo = extraInfo;
+      this.loadJavascript = loadJavascript;
+      this.javaScript = javaScript;
+      this.output = output;
+  }
+
+  var savedData = document.getElementById('katsu-final-data');
+
+  var parsedJson = JSON.parse(savedData.innerHTML); // json that contains data from the last request   
+  
+  var moduleID = '';
+  var headers = [new Header('','')];
+  var extraInfo = [new ExtraInfo('')]; 
+
+  var mainPageObject; 
+  var output; // This is the Output Object is made of arrays of LastEpisodes and LastAnimes Objects
+
+  var lastAnimes = []; // Array of LastAnimes Object
+  var lastEpisodes = []; // Array of LastAnimes Object
+
+  // You have to start coding here.
+  // Your mision is to fill the lastAnimes Array with LastAnimes Objects
+  // & fill the lastEpisdoes Arrray with LastEpisodes Objects
+
+  // Tips dont use " as quotes instead use ' single Quotes otherwise the module will not work
+  // Make sure you add ; at the end of every Line of code
+  // if you use \ in any part of the code you will have to add another \ before it so the json recognises it. (You)
+  // Will Rarely need to use this.)
+  // If you have any question dont doubt to ask me on the discord.
+  // Make sure you delete every comment before compressing the Script
+
+  while (lastEpisodes.length % 2 != 0) {
+    lastEpisodes.push(lastEpisodes[0]);
+  }
+
+  while (lastAnimes.length % 3 != 0) {
+    lastAnimes.push(lastAnimes[0]);
+  }
+  
+  output = new Output(lastEpisodes,lastAnimes);
+  mainPageObject = new MainPageObject('',headers,'',extraInfo,'','',output);
+
+  var finalJson = JSON.stringify(mainPageObject);
+  savedData.innerHTML = finalJson;
+  </script>

@@ -1,0 +1,158 @@
+{
+  "moduleName": "",
+  "moduleInitials": "",
+  "moduleDesc": "",
+  "developer": "",
+  "moduleID": "",
+  "moduleImage": "",
+  "moduleVersion": "",
+  "moduleLenguage": "",
+  "moduleHasVideos": "true",
+  "randomizeUserAgent": "false",
+  "baseURL": "",
+  "mainPageLeftTitle": "",
+  "mainPageRightTitle": "",
+  "blackListed": [
+    ""
+  ],
+  "mainPage": [
+    {
+      "request": "",
+      "method": "get",
+      "headers": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "extraInfo": [
+        {
+          "value": ""
+        }
+      ],
+      "loadJavascript": "false",
+      "javaScript": "",
+      "output": {
+        "lastEpisodes": [
+          {
+            "moduleID": "0",
+            "image": "",
+            "link": "",
+            "title": "",
+            "episode": ""
+          }
+        ],
+        "lastAnimes": [
+          {
+            "moduleID": "0",
+            "image": "",
+            "link": "",
+            "title": ""
+          }
+        ]
+      }
+    }
+  ],
+  "search": [
+    {
+      "request": "<searched><page>",
+      "method": "get",
+      "headers": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "separator": "+",
+      "extraInfo": [
+        {
+          "value": ""
+        }
+      ],
+      "loadJavascript": "false",
+      "javaScript": "",
+      "output": [
+        {
+          "moduleID": "0",
+          "image": "",
+          "link": "",
+          "title": "",
+          "type": "",
+          "voice": "",
+          "stars": ""
+        }
+      ]
+    }
+  ],
+  "info": [
+    {
+      "request": "this Can be empty",
+      "method": "get",
+      "headers": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "extraInfo": [
+        {
+          "value": ""
+        }
+      ],
+      "loadJavascript": "false",
+      "javaScript": "",
+      "output": {
+        "moduleID": "0",
+        "image": "",
+        "link": "",
+        "title": "",
+        "description": "",
+        "genres": [
+          ""
+        ],
+        "type": "",
+        "status": "",
+        "episodes": [
+          {
+            "link": "",
+            "moduleID": "",
+            "isDecodable": "false"
+          }
+        ]
+      }
+    }
+  ],
+  "episodes": [
+    {
+      "request": "This can be Empty",
+      "method": "get",
+      "headers": [
+        {
+          "key": "",
+          "value": ""
+        }
+      ],
+      "extraInfo": [
+        {
+          "value": ""
+        }
+      ],
+      "loadJavascript": "true",
+      "javaScript": "",
+      "output": [
+        {
+          "link": "",
+          "moduleID": "",
+          "linkIdentifier": "",
+          "isDecodable": "false",
+          "headers": [
+            {
+              "key": "key",
+              "value": "value"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
