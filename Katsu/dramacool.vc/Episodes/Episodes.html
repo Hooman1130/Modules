@@ -605,13 +605,8 @@ _adinsbyadx.push(['mekmoLa26mh8P7ZkZmm0', '100%', '100%']);
         if (link.includes('streamtape.com')) {
           link = link.replace('streamtape.com', 'streamta.pe');
         }
-        if (link.includes('dramacool.vc')) {
-          var linkIdentifer = 'VIDSTREAMING';
-        }
         output.push(new Output(link, linkIdentifier, moduleID, 'false', headers));
-        console.log(x, link, linkIdentifier);
     }
-
     episodeObject = new EpisodeObject('','',headers,extraInfo,'','',output);
     var finalJson = JSON.stringify(episodeObject);
     savedData.innerHTML = finalJson;
