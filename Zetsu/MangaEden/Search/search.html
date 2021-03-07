@@ -1,39 +1,566 @@
- <script>
-     function Header(key,value) {
-         this.key = key; 
-         this.value = value;
-     } 
-     function ExtraInfo(value) { 
-         this.value = value;
-     } 
-     function Output(moduleID,image,link,title,type,voice,stars) {
-         this.moduleID = moduleID; 
-         this.image = image;
-         this.link = link;
-         this.title = title; 
-         this.type = type;
-         this.voice = voice;
-         this.stars = stars;
-     } 
-     function SearchObject(request,method,headers,separator,extraInfo,loadJavascript,javaScript,output) {
-         this.request = request;
-         this.method = method;
-         this.headers = headers;
-         this.separator = separator;
-         this.extraInfo = extraInfo;
-         this.loadJavascript = loadJavascript;
-         this.javaScript = javaScript;
-         this.output = output; 
-     } 
-     var savedData = document.getElementById('katsu-final-data'); 
-     var parsedJson = JSON.parse(savedData.innerHTML);
-     var moduleID = ''; 
-     var headers = [new Header('','')]; 
-     var extraInfo = [new ExtraInfo('')];
-     var searchPageObject;
-     var output = []; 
-     
-     searchPageObject = new SearchObject('','',headers,'+',extraInfo,'','',output);
-     var finalJson = JSON.stringify(searchPageObject);
-     savedData.innerHTML = finalJson;
+<!doctype html>
+<html lang="it">
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="content-language" content="it"> 
+  <meta name="depion" content="Leggi Manga Online Gratis in Italiano su Manga Eden. Trova più di 9500 fumetti da leggere online in Italiano.Manga Directory List in Italiano - Read Online Over 9500 Manga for Free."> 
+  <meta name="keywords" content="read manga online for free,read manga scans online,manga download,japanese comic,naruto,bleach,one piece,fairy tail,toriko"> 
+  <title>
+    
+        Leggere Manga Online in Italiano - Fumetti Online su Manga Eden - Manga Eden
+    
+    </title> 
+ </head>
+ <body>
+  <div id="katsu-final-data">
+   {"method":"get","output":[{"moduleID":"0","title":"","image":"","link":"","stars":"","voice":"","type":""}],"separator":"+","loadJavascript":"false","headers":[{"key":"","value":""}],"javaScript":"","request":"https:\/\/www.mangaeden.com\/it\/it-directory\/?title=o&amp;page=1","extraInfo":[{"value":""}]}
+  </div>
+  <p src="/cdn-cgi/apps/head/4Ff6yGTuH1p2ceUPpXWz93IfUm4.js"></p>
+  <link href="//cdn.mangaeden.com/css/style.css?v=108cc14" rel="stylesheet" type="text/css"> 
+  <meta name="viewport" content="width=device-width"> 
+  <!--[if lte IE 8]>
+    <link href="//cdn.mangaeden.com/css/iesucks3.min.css?v=108" rel="stylesheet" type="text/css" />
+<![endif]--> 
+  <!--[if lte IE 7]>
+    <link href="//cdn.mangaeden.com/css/iesucks4.min.css?v=108" rel="stylesheet" type="text/css" />
+<![endif]--> 
+  <!--[if lte IE 6]>
+    <link href="//cdn.mangaeden.com/css/iesucks2.min.css?v=108" rel="stylesheet" type="text/css" />
+<![endif]--> 
+  <!--[if IE]>
+    <link href="//cdn.mangaeden.com/css/iesucks.min.css?v=108" rel="stylesheet" type="text/css" />
+<![endif]--> 
+  <style type="text/css">
+        #mangaListMenu ul li {
+            width: 105px !important;
+        }
+        #requestMenu ul li {
+            width: 85px !important;
+        }
+    </style> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/all.xml"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/en.xml"> 
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/it.xml"> 
+  <p type="text/javap"> this.top.location !== this.location &amp;&amp; (this.top.location = this.location); </p> 
+  <link rel="alternate" hreflang="en" href="/en/it-directory/"> 
+  <link rel="alternate" hreflang="it" href="/it/it-directory/"> 
+  <link rel="alternate" href="/it-directory/" hreflang="x-default"> 
+  <meta property="og:site_name" content="Manga Eden"> 
+  <meta property="og:title" content="Leggere Manga Online in Italiano - Fumetti Online su Manga Eden - Manga Eden"> 
+  <meta property="og:depion" content="Leggi Manga Online Gratis in Italiano su Manga Eden. Trova più di 9500 fumetti da leggere online in Italiano.Manga Directory List in Italiano - Read Online Over 9500 Manga for Free."> 
+  <meta property="og:url" content="http://www.mangaeden.com/it/it-directory/"> 
+  <meta property="og:type" content="website"> 
+  <p type="application/ld+json"> { "@context": "http://schema.org", "@type": "WebSite", "name" : "Manga Eden", "alternateName" : "MangaEden", "url": "https://www.mangaeden.com/", "potentialAction": { "@type": "SearchAction", "target": "https://www.mangaeden.com/en-directory/?g=1&amp;title={search_term_string}", "query-input": "required name=search_term_string" } } </p> 
+  <p> var _onetag = _onetag || {}; (function(o,n,e,t,a,g) { o.cmd = o.cmd || [], o.pub = o.pub || [], o.pub.push("2ae28186b07a74"), g = n.createElement("p"), g.async = true, g.src = "//onetag-sys.com/main.js", n.head.appendChild(g) })(_onetag, document); </p>   
+  <p defer type="text/javap" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></p> 
+  <p defer type="text/javap" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></p> 
+  <p defer type="text/javap" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></p> 
+  <p defer type="text/javap" src="//cdn.mangaeden.com/js/ad/advertisement.js?v=108a1"></p> 
+  <p defer type="text/javap" src="//cdn.mangaeden.com/js/base.js?v=108b8"></p> 
+  <p defer type="text/javap" src="//cdn.mangaeden.com/js/directory.js?v=108d"></p> 
+  <div id="loginBox">
+   <div id="loginBoxC"> 
+    <div id="loginForm"> 
+     <form action="/it/login/"> 
+      <input name="username" id="login_username" type="text" value="Username"> 
+      <input name="password" id="login_password" type="password" value="Password"> 
+      <button class="button">Accesso</button> 
+     </form> 
+    </div> 
+    <div class="rightClose" onclick="hideLoginBox();"> 
+     <img width="12" height="12" src="//cdn.mangaeden.com/images/t2.png" alt="Close"> 
+    </div> 
+    <div style="float:right;margin-right:10px;margin-top:2px;"> 
+     <a href="/reset-password/" class="button">Password Dimenticata? Resettala</a> 
+    </div> 
+    <div class="clear"></div> 
+   </div>
+  </div> 
+  <div style="display:none;" id="dialog-form" title="Create new user"> 
+   <p class="validateTips">Tutti i campi del form sono richiesti.</p> 
+   <form> 
+    <fieldset> 
+     <label for="username">Username</label> 
+     <input type="text" name="username" id="username" class="text ui-widget-content ui-corner-all"> 
+     <label for="email">Email</label> 
+     <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all"> 
+     <label for="password">Password</label> 
+     <input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all"> 
+     <label for="passwordCheck">Verifica Password</label> 
+     <input type="password" name="passwordCheck" id="passwordCheck" value="" class="text ui-widget-content ui-corner-all"> 
+     <div class="g-recaptcha" data-sitekey="6LflvccSAAAAAJ48WnCGKaLLFWkjrPvdI6fE5Cym"></div> 
+    </fieldset> 
+   </form> 
+  </div> 
+  <div id="top"></div> 
+  <div id="top2"> 
+   <div id="top_right_menu"> 
+    <div id="menu"> 
+     <ul> 
+      <li><a href="/it/">Home</a></li> 
+      <li id="mangaListMenu"><a href="javap: void(0);">Lista Manga</a> 
+       <div style="position: relative; z-index: 3000">
+        <ul class="sub"> 
+         <li><a href="/it/en-directory/">Inglese</a></li> 
+         <li><a href="/it/it-directory/">Italiano</a></li> 
+         <li><a href="/it/group/">Gruppi</a></li> 
+         <li class="lastSub"><a class="randomize" href="/it/random-manga/">Casuale</a></li> 
+        </ul>
+       </div> </li> 
+      <li id="requestMenu"><a href="javap: void(0);">Aggiungi</a> 
+       <div style="position: relative; z-index: 3000">
+        <ul class="sub"> 
+         <li><a href="/upload-chapter/">Capitolo</a></li> 
+         <li><a href="/request/manga/">Manga</a></li> 
+         <li><a href="/request/group/">Gruppo</a></li> 
+         <li class="lastSub"><a href="/requests/">Stato</a></li> 
+        </ul>
+       </div> </li> 
+      <li id="accountBoxMenu" class="anonMenu"><a class="accountBox" href="javap: void(0);">Account</a> 
+       <div style="position: relative; z-index: 3000"> 
+        <ul class="sub"> 
+         <li><a href="javap: void(0);" onclick="showLoginBox();">Accesso</a></li> 
+         <li class="lastSub"><a href="javap: void(0);" onclick="hideLoginBox();openRegDialog();">Registrati</a></li> 
+        </ul> 
+       </div> </li> 
+      <li id="accountBoxMenu2" style="display: none;" class="authMenu"><a class="accountBox" href="javap: void(0);">Account</a> 
+       <div style="position: relative; z-index: 3000"> 
+        <ul class="sub"> 
+         <li><a class="doubleSub" href="/mymanga/">myManga List</a></li> 
+         <li><a class="doubleSub" rel="nofollow" href="/change-password/">Cambia Password</a></li> 
+         <li><a href="javap: void(0);" onclick="logout();">Esci</a></li> 
+        </ul> 
+       </div> </li> 
+     </ul> 
+    </div> 
+    <div id="search">
+     <div id="searchC"> 
+      <form action="/it/it-directory/" method="GET"> 
+       <input name="title" id="searchBox" value="Cerca Manga" onclick="if(this.value==this.defaultValue){this.value='';this.style.color='black';}" onblur="if(this.value==''){this.value=this.defaultValue;this.style.color='#898989';}"> 
+      </form> 
+     </div>
+    </div> 
+    <div id="langForm"> 
+     <form action="/change-language/" method="post"> 
+      <input type="hidden" name="next" value="/it/it-directory/?title=o"> 
+      <input type="hidden" id="languageIn" name="language" value=""> 
+      <input type="image" value="it" title="Cambia lingua in Italiano" src="//cdn.mangaeden.com/images/flag-it.png"> 
+      <input type="image" value="en" title="Cambia lingua in Inglese" src="//cdn.mangaeden.com/images/flag-en.png"> 
+     </form> 
+    </div> 
+   </div> 
+   <div id="logo"> 
+    <a href="/it/"> <img src="//cdn.mangaeden.com/images/logo2.png" alt="Manga Eden Leggi Manga Online Gratuitamente !"> </a> 
+   </div> 
+  </div> 
+  <div id="flashMsg"> 
+   <div class="leftClose" onclick="$('#flashMsg').hide();"> 
+    <img width="12" height="12" src="//cdn.mangaeden.com/images/t2.png" alt="Close"> 
+   </div> 
+   <div id="flashMsgC"> 
+   </div> 
+  </div> 
+  <div id="content"> 
+   <div class="clear"></div> 
+   <div id="contentIn" style="padding: 10px !important;"> 
+    <div id="searchManga" class="tableTop topRadius"> 
+     <h1 style="margin: 0;padding: 15px 0 0 20px;font-size: 14px;text-align: center;"> Leggi Manga Online Gratis in Italiano su Manga Eden. Trova più di 9500 fumetti da leggere online in Italiano. </h1> 
+     <form method="GET" action="."> 
+      <div id="mangaInput"> 
+       <div class="formButtons0"> 
+        <input type="submit" onclick="submitGenre();" class="searchButton" value="Cerca"> 
+        <span onclick="advsearch=$('#advancedSearch');if (advsearch.is(':visible')) {advsearch.slideUp();} else {$('#searchManga').find('#advancedSearch').slideDown();}" class="button">Ricerca Avanzata </span> 
+       </div> 
+       <label for="title">Manga Title</label> 
+       <input id="title" name="title" size="30" type="text" value="o"> 
+      </div> 
+      <div class="clear"></div> 
+      <div id="advancedSearch">
+       <table cellpadding="10"> 
+        <tbody>
+         <tr>
+          <td><label for="type">Type</label></td>
+          <td>
+           <ul class="" id="type">
+            <li><input id="type-0" name="type" type="checkbox" value="0"> <label>Japanese Manga</label></li>
+            <li><input id="type-1" name="type" type="checkbox" value="1"> <label>Korean Manhwa</label></li>
+            <li><input id="type-2" name="type" type="checkbox" value="2"> <label>Chinese Manhua</label></li>
+            <li><input id="type-3" name="type" type="checkbox" value="3"> <label>Comic</label></li>
+            <li><input id="type-4" name="type" type="checkbox" value="4"> <label>Doujinshi</label></li>
+           </ul></td>
+         </tr> 
+         <tr>
+          <td><label for="author">Author</label></td>
+          <td><input id="author" name="author" type="text" value=""></td>
+         </tr> 
+         <tr>
+          <td><label for="artist">Artist</label></td>
+          <td><input id="artist" name="artist" type="text" value=""></td>
+         </tr> 
+         <tr>
+          <td><label for="released">Year of Released</label></td>
+          <td><select id="releasedType" name="releasedType"><option value="0">on</option><option value="1">after</option><option value="2">before</option></select> <input id="released" name="released" type="text" value=""></td>
+         </tr> 
+         <tr>
+          <td><label for="status">Status</label></td>
+          <td>
+           <ul class="" id="status">
+            <li><input id="status-1" name="status" type="checkbox" value="1"> <label>Ongoing</label></li>
+            <li><input id="status-2" name="status" type="checkbox" value="2"> <label>Completed</label></li>
+            <li><input id="status-0" name="status" type="checkbox" value="0"> <label>Suspended</label></li>
+           </ul></td>
+         </tr> 
+         <tr> 
+          <td><label for="categoriesInc">Genres</label></td> 
+          <td id="genresBox"> <a href="javap: void(0);" id="4e70ea8cc092255ef70073d3" onclick="genreClicked(this);return false;" class="genre t0"> Avventura </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073c3" onclick="genreClicked(this);return false;" class="genre t0"> Azione </a> <a href="javap: void(0);" id="4e70ea90c092255ef70074b7" onclick="genreClicked(this);return false;" class="genre t0"> Bara </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073d0" onclick="genreClicked(this);return false;" class="genre t0"> Commedia </a> <a href="javap: void(0);" id="4e70ea8fc092255ef7007475" onclick="genreClicked(this);return false;" class="genre t0"> Demenziale </a> <a href="javap: void(0);" id="4e70ea93c092255ef70074e4" onclick="genreClicked(this);return false;" class="genre t0"> Dounshinji </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073f9" onclick="genreClicked(this);return false;" class="genre t0"> Drama </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073cd" onclick="genreClicked(this);return false;" class="genre t0"> Ecchi </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073c4" onclick="genreClicked(this);return false;" class="genre t0"> Fantasy </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073d1" onclick="genreClicked(this);return false;" class="genre t0"> Harem </a> <a href="javap: void(0);" id="4e70ea90c092255ef700749a" onclick="genreClicked(this);return false;" class="genre t0"> Hentai </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073ce" onclick="genreClicked(this);return false;" class="genre t0"> Horror </a> <a href="javap: void(0);" id="4e70ea90c092255ef70074bd" onclick="genreClicked(this);return false;" class="genre t0"> Josei </a> <a href="javap: void(0);" id="4e70ea93c092255ef700751b" onclick="genreClicked(this);return false;" class="genre t0"> Magico </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073ef" onclick="genreClicked(this);return false;" class="genre t0"> Mecha </a> <a href="javap: void(0);" id="4e70ea8dc092255ef700740a" onclick="genreClicked(this);return false;" class="genre t0"> Misteri </a> <a href="javap: void(0);" id="4e70ea8fc092255ef7007456" onclick="genreClicked(this);return false;" class="genre t0"> Musica </a> <a href="javap: void(0);" id="4e70ea8ec092255ef7007439" onclick="genreClicked(this);return false;" class="genre t0"> Psicologico </a> <a href="javap: void(0);" id="4e70ea90c092255ef70074ae" onclick="genreClicked(this);return false;" class="genre t0"> Raccolta </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073c5" onclick="genreClicked(this);return false;" class="genre t0"> Romantico </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073e4" onclick="genreClicked(this);return false;" class="genre t0"> Sci-Fi </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073e5" onclick="genreClicked(this);return false;" class="genre t0"> Scolastico </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073ea" onclick="genreClicked(this);return false;" class="genre t0"> Seinen </a> <a href="javap: void(0);" id="4e70ea8dc092255ef7007432" onclick="genreClicked(this);return false;" class="genre t0"> Sentimentale </a> <a href="javap: void(0);" id="4e70ea90c092255ef70074b8" onclick="genreClicked(this);return false;" class="genre t0"> Shota </a> <a href="javap: void(0);" id="4e70ea8dc092255ef7007421" onclick="genreClicked(this);return false;" class="genre t0"> Shoujo </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073c6" onclick="genreClicked(this);return false;" class="genre t0"> Shounen </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073c7" onclick="genreClicked(this);return false;" class="genre t0"> Sovrannaturale </a> <a href="javap: void(0);" id="4e70ea99c092255ef70075a3" onclick="genreClicked(this);return false;" class="genre t0"> Splatter </a> <a href="javap: void(0);" id="4e70ea8dc092255ef7007426" onclick="genreClicked(this);return false;" class="genre t0"> Sportivo </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073f4" onclick="genreClicked(this);return false;" class="genre t0"> Storico </a> <a href="javap: void(0);" id="4e70ea8ec092255ef700743f" onclick="genreClicked(this);return false;" class="genre t0"> Vita Quotidiana </a> <a href="javap: void(0);" id="4e70ea8cc092255ef70073de" onclick="genreClicked(this);return false;" class="genre t0"> Yaoi </a> <a href="javap: void(0);" id="4e70ea9ac092255ef70075d1" onclick="genreClicked(this);return false;" class="genre t0"> Yuri </a> 
+           <div class="clear"></div><br> </td> 
+         </tr> 
+         <tr>
+          <td colspan="2"> 
+           <div class="formButtons1"> 
+            <span onclick="submitGenre();" class="searchButton">Cerca </span> 
+            <span onclick="$('#searchManga').find('form').clearForm();setGenres();" class="button">Resetta </span> 
+           </div> </td>
+         </tr> 
+        </tbody>
+       </table>
+      </div> 
+      <ul class="" id="categoriesInc">
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073d3" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073d3"> <label>Avventura</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073c3" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073c3"> <label>Azione</label></li>
+       <li><input id="categoriesInc-4e70ea90c092255ef70074b7" name="categoriesInc" type="checkbox" value="4e70ea90c092255ef70074b7"> <label>Bara</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073d0" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073d0"> <label>Commedia</label></li>
+       <li><input id="categoriesInc-4e70ea8fc092255ef7007475" name="categoriesInc" type="checkbox" value="4e70ea8fc092255ef7007475"> <label>Demenziale</label></li>
+       <li><input id="categoriesInc-4e70ea93c092255ef70074e4" name="categoriesInc" type="checkbox" value="4e70ea93c092255ef70074e4"> <label>Dounshinji</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073f9" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073f9"> <label>Drama</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073cd" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073cd"> <label>Ecchi</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073c4" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073c4"> <label>Fantasy</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073d1" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073d1"> <label>Harem</label></li>
+       <li><input id="categoriesInc-4e70ea90c092255ef700749a" name="categoriesInc" type="checkbox" value="4e70ea90c092255ef700749a"> <label>Hentai</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073ce" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073ce"> <label>Horror</label></li>
+       <li><input id="categoriesInc-4e70ea90c092255ef70074bd" name="categoriesInc" type="checkbox" value="4e70ea90c092255ef70074bd"> <label>Josei</label></li>
+       <li><input id="categoriesInc-4e70ea93c092255ef700751b" name="categoriesInc" type="checkbox" value="4e70ea93c092255ef700751b"> <label>Magico</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073ef" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073ef"> <label>Mecha</label></li>
+       <li><input id="categoriesInc-4e70ea8dc092255ef700740a" name="categoriesInc" type="checkbox" value="4e70ea8dc092255ef700740a"> <label>Misteri</label></li>
+       <li><input id="categoriesInc-4e70ea8fc092255ef7007456" name="categoriesInc" type="checkbox" value="4e70ea8fc092255ef7007456"> <label>Musica</label></li>
+       <li><input id="categoriesInc-4e70ea8ec092255ef7007439" name="categoriesInc" type="checkbox" value="4e70ea8ec092255ef7007439"> <label>Psicologico</label></li>
+       <li><input id="categoriesInc-4e70ea90c092255ef70074ae" name="categoriesInc" type="checkbox" value="4e70ea90c092255ef70074ae"> <label>Raccolta</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073c5" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073c5"> <label>Romantico</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073e4" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073e4"> <label>Sci-Fi</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073e5" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073e5"> <label>Scolastico</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073ea" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073ea"> <label>Seinen</label></li>
+       <li><input id="categoriesInc-4e70ea8dc092255ef7007432" name="categoriesInc" type="checkbox" value="4e70ea8dc092255ef7007432"> <label>Sentimentale</label></li>
+       <li><input id="categoriesInc-4e70ea90c092255ef70074b8" name="categoriesInc" type="checkbox" value="4e70ea90c092255ef70074b8"> <label>Shota</label></li>
+       <li><input id="categoriesInc-4e70ea8dc092255ef7007421" name="categoriesInc" type="checkbox" value="4e70ea8dc092255ef7007421"> <label>Shoujo</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073c6" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073c6"> <label>Shounen</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073c7" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073c7"> <label>Sovrannaturale</label></li>
+       <li><input id="categoriesInc-4e70ea99c092255ef70075a3" name="categoriesInc" type="checkbox" value="4e70ea99c092255ef70075a3"> <label>Splatter</label></li>
+       <li><input id="categoriesInc-4e70ea8dc092255ef7007426" name="categoriesInc" type="checkbox" value="4e70ea8dc092255ef7007426"> <label>Sportivo</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073f4" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073f4"> <label>Storico</label></li>
+       <li><input id="categoriesInc-4e70ea8ec092255ef700743f" name="categoriesInc" type="checkbox" value="4e70ea8ec092255ef700743f"> <label>Vita Quotidiana</label></li>
+       <li><input id="categoriesInc-4e70ea8cc092255ef70073de" name="categoriesInc" type="checkbox" value="4e70ea8cc092255ef70073de"> <label>Yaoi</label></li>
+       <li><input id="categoriesInc-4e70ea9ac092255ef70075d1" name="categoriesInc" type="checkbox" value="4e70ea9ac092255ef70075d1"> <label>Yuri</label></li>
+      </ul> 
+      <ul class="" id="categoriesExcl">
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073d3" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073d3"> <label>Avventura</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073c3" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073c3"> <label>Azione</label></li>
+       <li><input id="categoriesExcl-4e70ea90c092255ef70074b7" name="categoriesExcl" type="checkbox" value="4e70ea90c092255ef70074b7"> <label>Bara</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073d0" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073d0"> <label>Commedia</label></li>
+       <li><input id="categoriesExcl-4e70ea8fc092255ef7007475" name="categoriesExcl" type="checkbox" value="4e70ea8fc092255ef7007475"> <label>Demenziale</label></li>
+       <li><input id="categoriesExcl-4e70ea93c092255ef70074e4" name="categoriesExcl" type="checkbox" value="4e70ea93c092255ef70074e4"> <label>Dounshinji</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073f9" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073f9"> <label>Drama</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073cd" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073cd"> <label>Ecchi</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073c4" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073c4"> <label>Fantasy</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073d1" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073d1"> <label>Harem</label></li>
+       <li><input id="categoriesExcl-4e70ea90c092255ef700749a" name="categoriesExcl" type="checkbox" value="4e70ea90c092255ef700749a"> <label>Hentai</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073ce" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073ce"> <label>Horror</label></li>
+       <li><input id="categoriesExcl-4e70ea90c092255ef70074bd" name="categoriesExcl" type="checkbox" value="4e70ea90c092255ef70074bd"> <label>Josei</label></li>
+       <li><input id="categoriesExcl-4e70ea93c092255ef700751b" name="categoriesExcl" type="checkbox" value="4e70ea93c092255ef700751b"> <label>Magico</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073ef" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073ef"> <label>Mecha</label></li>
+       <li><input id="categoriesExcl-4e70ea8dc092255ef700740a" name="categoriesExcl" type="checkbox" value="4e70ea8dc092255ef700740a"> <label>Misteri</label></li>
+       <li><input id="categoriesExcl-4e70ea8fc092255ef7007456" name="categoriesExcl" type="checkbox" value="4e70ea8fc092255ef7007456"> <label>Musica</label></li>
+       <li><input id="categoriesExcl-4e70ea8ec092255ef7007439" name="categoriesExcl" type="checkbox" value="4e70ea8ec092255ef7007439"> <label>Psicologico</label></li>
+       <li><input id="categoriesExcl-4e70ea90c092255ef70074ae" name="categoriesExcl" type="checkbox" value="4e70ea90c092255ef70074ae"> <label>Raccolta</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073c5" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073c5"> <label>Romantico</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073e4" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073e4"> <label>Sci-Fi</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073e5" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073e5"> <label>Scolastico</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073ea" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073ea"> <label>Seinen</label></li>
+       <li><input id="categoriesExcl-4e70ea8dc092255ef7007432" name="categoriesExcl" type="checkbox" value="4e70ea8dc092255ef7007432"> <label>Sentimentale</label></li>
+       <li><input id="categoriesExcl-4e70ea90c092255ef70074b8" name="categoriesExcl" type="checkbox" value="4e70ea90c092255ef70074b8"> <label>Shota</label></li>
+       <li><input id="categoriesExcl-4e70ea8dc092255ef7007421" name="categoriesExcl" type="checkbox" value="4e70ea8dc092255ef7007421"> <label>Shoujo</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073c6" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073c6"> <label>Shounen</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073c7" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073c7"> <label>Sovrannaturale</label></li>
+       <li><input id="categoriesExcl-4e70ea99c092255ef70075a3" name="categoriesExcl" type="checkbox" value="4e70ea99c092255ef70075a3"> <label>Splatter</label></li>
+       <li><input id="categoriesExcl-4e70ea8dc092255ef7007426" name="categoriesExcl" type="checkbox" value="4e70ea8dc092255ef7007426"> <label>Sportivo</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073f4" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073f4"> <label>Storico</label></li>
+       <li><input id="categoriesExcl-4e70ea8ec092255ef700743f" name="categoriesExcl" type="checkbox" value="4e70ea8ec092255ef700743f"> <label>Vita Quotidiana</label></li>
+       <li><input id="categoriesExcl-4e70ea8cc092255ef70073de" name="categoriesExcl" type="checkbox" value="4e70ea8cc092255ef70073de"> <label>Yaoi</label></li>
+       <li><input id="categoriesExcl-4e70ea9ac092255ef70075d1" name="categoriesExcl" type="checkbox" value="4e70ea9ac092255ef70075d1"> <label>Yuri</label></li>
+      </ul> 
+     </form> 
+    </div> 
+    <div class="pagination pagination_bottom"> 
+     <strong>1</strong> 
+    </div> 
+    <div class="pagination pagination_top"> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=%23&amp;title=o">#</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=A&amp;title=o">A</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=B&amp;title=o">B</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=C&amp;title=o">C</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=D&amp;title=o">D</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=E&amp;title=o">E</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=F&amp;title=o">F</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=G&amp;title=o">G</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=H&amp;title=o">H</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=I&amp;title=o">I</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=J&amp;title=o">J</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=K&amp;title=o">K</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=L&amp;title=o">L</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=M&amp;title=o">M</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=N&amp;title=o">N</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=O&amp;title=o">O</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=P&amp;title=o">P</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=Q&amp;title=o">Q</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=R&amp;title=o">R</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=S&amp;title=o">S</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=T&amp;title=o">T</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=U&amp;title=o">U</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=V&amp;title=o">V</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=W&amp;title=o">W</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=X&amp;title=o">X</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=Y&amp;title=o">Y</a> 
+     <a class="ui-state-default" href="/it/it-directory/?startsWith=Z&amp;title=o">Z</a> 
+     <a class="ui-state-default" href="/it/it-directory/?title=o">TUTTI</a> 
+    </div> 
+    <table id="mangaList"> 
+     <thead> 
+      <tr class="ui-state-default"> 
+       <th id="mangaTitleTh"> <a href="/it/it-directory/?order=-0&amp;title=o">Titolo Manga</a> </th> 
+       <th class="followersList"> <a href="javap: void(0);">Iscritti</a> </th> 
+       <th class="hitsList"> <a href="/it/it-directory/?order=-1&amp;title=o">Visite</a> <span class="ui-icon ui-icon-triangle-1-s"></span> </th> 
+       <th class="chaptersLenList"> <a href="/it/it-directory/?order=2&amp;title=o">Capitoli</a> </th> 
+       <th> <a href="/it/it-directory/?order=3&amp;title=o">Ultimo Capitolo</a> </th> 
+      </tr> 
+     </thead> 
+     <tbody> 
+      <tr> 
+       <td><a href="/it/it-manga/g.t.o/" class="openManga">G.T.O.</a> </td> 
+       <td class="followersList">683</td> 
+       <td class="hitsList">16049030</td> 
+       <td class="chaptersLenList">25</td> 
+       <td> <a href="/it/it-manga/g.t.o/25/">25 <span class="date">del 07 lug 2012</span></a> </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/dungeon-ni-deai-o-motomeru-no-wa-machigatte-iru-darou-ka/" class="openManga">Dungeon ni Deai o Motomeru no wa Machigatte Iru Darou ka</a> </td> 
+       <td class="followersList">1780</td> 
+       <td class="hitsList">556848</td> 
+       <td class="chaptersLenList">56</td> 
+       <td> <a href="/it/it-manga/dungeon-ni-deai-o-motomeru-no-wa-machigatte-iru-darou-ka/56/">56 <span class="date">del 26 giu 2016</span></a> </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/kimi-o-mawashitai-lamore--soffice...come-carta-igienica/" class="openManga">Kimi o Mawashitai L'amore è soffice...come carta igienica!</a> </td> 
+       <td class="followersList">6</td> 
+       <td class="hitsList">2106</td> 
+       <td class="chaptersLenList">2</td> 
+       <td> <a href="/it/it-manga/kimi-o-mawashitai-lamore--soffice...come-carta-igienica/2/">2 <span class="date">del 18 feb 2019</span></a> </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/watashi-wa-tensai-o-katte-iru/" class="closedManga">Watashi wa Tensai o Katte Iru</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/sono-hoshi-o-bokutachi-wa-koi-to-yobu-koto-ni-suru/" class="closedManga">Sono Hoshi o Bokutachi wa Koi to Yobu Koto ni Suru.</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/uchuu-o-kakeru-yodaka/" class="closedManga">Uchuu o Kakeru Yodaka</a> </td> 
+       <td class="followersList">1</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/kare-ga-kanojo-o-tsukuranai-riyuu/" class="closedManga">Kare ga Kanojo O Tsukuranai Riyuu</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/himitsu-na-kimi-ni-koi-o-shita/" class="closedManga">Himitsu na Kimi ni Koi o Shita</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/sekai-wa-kimi-o-sukuu/" class="closedManga">Sekai wa Kimi o Sukuu!</a> </td> 
+       <td class="followersList">2</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/komatsubara-ga-koibito-ni-naritasou-ni-kochira-o-miteiru/" class="closedManga">Komatsubara ga Koibito ni Naritasou ni Kochira o Miteiru!</a> </td> 
+       <td class="followersList">1</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/tonari-wa-nani-o-kuu-hito-zo/" class="closedManga">Tonari wa Nani o Kuu Hito zo</a> </td> 
+       <td class="followersList">7</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/me-o-tojite-3-byou/" class="closedManga">Me o Tojite 3-Byou</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/soredemo-bokura-wa-koi-o-suru/" class="closedManga">Soredemo Bokura wa Koi o Suru</a> </td> 
+       <td class="followersList">1</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/hiiragi-sama-wa-jibun-o-sagashite-iru/" class="closedManga">Hiiragi-sama wa Jibun o Sagashite Iru.</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/kare-wa-tsumetai-furi-o-shite/" class="closedManga">Kare wa Tsumetai Furi o Shite</a> </td> 
+       <td class="followersList">1</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/amai-amai-koi-o-seyo/" class="closedManga">Amai Amai Koi o Seyo</a> </td> 
+       <td class="followersList">1</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/boku-wa-uchuujin-ni-koi-o-shita/" class="closedManga">Boku wa Uchuujin ni Koi o Shita.</a> </td> 
+       <td class="followersList">1</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/sekai-wa-nakajima-ni-koi-o-suru/" class="closedManga">Sekai wa Nakajima ni Koi o Suru!!</a> </td> 
+       <td class="followersList">0</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+      <tr> 
+       <td><a href="/it/it-manga/kimi-o-chuushin-ni-sekai-wa-mawaru/" class="closedManga">Kimi o Chuushin ni Sekai wa Mawaru</a> </td> 
+       <td class="followersList">2</td> 
+       <td class="hitsList">0</td> 
+       <td class="chaptersLenList">0</td> 
+       <td> Nessuno </td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <div class="pagination pagination_bottom bottomRadius"> 
+     <strong>1</strong> 
+    </div> 
+    <p type="text/javap"> window.set_genres = false; </p> 
+    <div style="display:none;" xmlns:v="http://rdf.data-vocabulary.org/#"> 
+     <span typeof="v:Breadcrumb"> <a href="https://www.mangaeden.com/it/it-directory/" rel="v:url" property="v:title"> It </a> </span> 
+    </div> 
+   </div> 
+   <div class="clear"></div> 
+  </div> 
+  <div id="bottom">
+    Copyright e marchi dei manga, e altri materiali promozionali sono ritenuti dai loro rispettivi proprietari e il loro utilizzo è permesso solo sotto alcune eque clausole della legge sul Copyright. 
+   <br> 
+   <a href="/advertising/">Advertise here</a> | 
+   <a href="/it/about/">Chi siamo</a> | 
+   <a href="/it/privacy/">Privacy</a> | 
+   <a href="/it/disclamer/">Condizioni Legali</a> | 
+   <a href="/it/terms/">Termini di Servizio</a> | 
+   <b><a href="/it/contact-us/">Contattaci</a></b> | 
+   <a href="/api/">API</a> | 
+   <a id="mobile_version_changer" href="javap: enable_responsive(false);">Versione Mobile</a> | 
+   <a id="normal_version_changer" href="javap: disable_responsive(false);">Versione Normale</a> | 
+   <a href="#">Sopra</a> 
+   <div style="clear:both;"></div> 
+  </div> 
+  <div id="dialog" title=""></div> 
+  <p type="text/javap"> window.success_login = "Ora sei loggato."; window.success_logout = "Hai fatto logout."; window.success_reg = "Benvuto mangaeden! Ti sei registrati con successo e hai automaticamente fatto login nel sito."; window.error_logout = "Errore sconosciuto durante l'accesso, per favore ricarica la pagina, se l'errore persiste contattaci."; window.button_account = "Crea un account"; window.accountcheck_pwd = "La Password deve essere composta da solo : a-z 0-9"; window.accountcheck_pwd2 = "Le password non sono uguali."; window.accountcheck_username = "L'Username deve essere composto da a-z, 0-9, underscores, e iniziare con una lettera."; window.accountcheck_len = "La lunghezza di {0} deve essere fra {1} e {2} caratteri."; window.comments_time = "Non puoi inviare piu' di un messaggio ogni 10 secondi."; window.comments_error = "Errore sconosciuto mentre aggiungevi il messaggio."; window.comments_equal = "Non puoi inviare due volte lo stesso messaggio."; window.msg_you = "Tu"; window.RECAPTCHA_PUBLIC = "6LflvccSAAAAAJ48WnCGKaLLFWkjrPvdI6fE5Cym"; window.media_url = "//cdn.mangaeden.com/"; </p> 
+  <div id="toTop">
+    Torna In Alto 
+  </div>  
+  <script>
+    function Header(key,value) {
+        this.key = key; 
+        this.value = value;
+    } 
+    function ExtraInfo(value) { 
+        this.value = value;
+    } 
+    function Output(moduleID,image,link,title,type,voice,stars) {
+        this.moduleID = moduleID; 
+        this.image = image;
+        this.link = link;
+        this.title = title; 
+        this.type = type;
+        this.voice = voice;
+        this.stars = stars;
+    } 
+    function SearchObject(request,method,headers,separator,extraInfo,loadJavascript,javaScript,output) {
+        this.request = request;
+        this.method = method;
+        this.headers = headers;
+        this.separator = separator;
+        this.extraInfo = extraInfo;
+        this.loadJavascript = loadJavascript;
+        this.javaScript = javaScript;
+        this.output = output; 
+    } 
+    var savedData = document.getElementById('katsu-final-data'); 
+    var parsedJson = JSON.parse(savedData.innerHTML);
+    var moduleID = '11305'; 
+    var headers = [new Header('','')]; 
+    var extraInfo = [new ExtraInfo('')];
+    var searchPageObject;
+    var output = []; 
+    
+    data = document.querySelector('#mangaList > tbody').querySelectorAll('tr');
+
+    for (x=0; x<data.length; x++) {
+        result = data[x];
+        main = result.querySelector('td > a');
+        image = 'https://media.discordapp.net/attachments/795348438501163018/817975937504116776/no_image.png';
+        link = 'https://www.mangaeden.com' + main.href;
+        title = main.innerText;
+        type = 'Manga';
+        voice = 'Italian';
+        stars = result.querySelector('td.chaptersLenList').innerText;
+        output.push(new Output(moduleID, image, link, title, type, voice, stars));
+    }
+    searchPageObject = new SearchObject('','',headers,'+',extraInfo,'','',output);
+    var finalJson = JSON.stringify(searchPageObject);
+    savedData.innerHTML = finalJson;
 </script>
+ </body>
+</html>
+ 
