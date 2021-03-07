@@ -1545,11 +1545,6 @@ for (let x = 0; x < data.length - 1; x++) {
     let title = manga.querySelector('div.hottestInfo > a').innerText;
     mangasArray.push(new MangasArray(moduleID, image, link, title));
 }
-if (parsedJson.request.includes('it')) {
-    sectionName = 'Italian';
-} else if (parsedJson.request.includes('eng')) {
-    sectionName = 'English';
-}
 output.push(new Output(sectionName, mangasArray));
 for (var x = 0; x < parsedJson.extraInfo.length; x++) {
     var object = new ExtraInfo(parsedJson.extraInfo[x].value);
