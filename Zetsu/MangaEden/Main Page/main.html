@@ -1532,29 +1532,23 @@
     var output = [];
     var sectionName = '';
     var nextRequest = '';
-    
-    try {
-        nextRequest = parsedJson.extraInfo[currentPos + 1].value;
-    }catch (e) { 
-        console.log(e);
-    } 
-    
     if (currentPos != 0) { 
         output = parsedJson.output;
     }
-    
      var mangasArray = [];
     
-     data = document.querySelector('#news').querySelectorAll('li');
-     for (let x = 0; x < data.length - 1; x++) {
-        let manga = data[x];
-        let image = 'https:'+manga.querySelector('div.hottestImage > img').getAttribute('data-src');
-        let link = 'https://www.mangaeden.com'+manga.querySelector('div.hottestInfo > a').href;
-        let title = manga.querySelector('div.hottestInfo > a').innerText;
-        mangasArray.push(new MangasArray(moduleID, image, link, title));
-     }
+
      if (parsedJson.request.includes('it')) {
-       sectionName='Italian';
+      data = document.querySelector('#news').querySelectorAll('li');
+      for (let x = 0; x < data.length - 1; x++) {
+          let manga = data[x];
+          let image = 'https:'+manga.querySelector('div.hottestImage > img').getAttribute('data-src');
+          let link = 'https://www.mangaeden.com'+manga.querySelector('div.hottestInfo > a').href;
+          let title = manga.querySelector('div.hottestInfo > a').innerText;
+          mangasArray.push(new MangasArray(moduleID, image, link, title));
+      }
+        sectionName='Italian';
+        nextRequest='https://www.mangaeden.com/eng/';
      } else if (parsedJson.request.includes('eng')) {
        sectionName='English';
      }
