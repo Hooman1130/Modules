@@ -1482,85 +1482,84 @@
     Torna In Alto 
   </div>  
   <script> 
-    function Header(key, value){ 
-         this.key = key; this.value = value;
-     } 
-    
-    function ExtraInfo(value){
-        this.value = value;
+function Header(key, value) {
+this.key = key;
+this.value = value;
+}
+function ExtraInfo(value) {
+    this.value = value;
+}
+function Output(sectionName, mangasArray) {
+    this.sectionName = sectionName;
+    this.mangasArray = mangasArray;
+}
+function MangasArray(moduleID, image, link, title) {
+    this.moduleID = moduleID;
+    this.image = image;
+    this.link = link;
+    this.title = title;
+}
+function MainPageObject(request, headers, method, extraInfo, loadJavascript, javaScript, output) {
+    this.request = request;
+    this.headers = headers;
+    this.method = method;
+    this.extraInfo = extraInfo;
+    this.loadJavascript = loadJavascript;
+    this.javaScript = javaScript;
+    this.output = output;
+}
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
     }
-    
-    function Output(sectionName, mangasArray){ 
-        this.sectionName = sectionName; 
-        this.mangasArray = mangasArray;
-    } 
-    
-    function MangasArray(moduleID, image, link, title){
-        this.moduleID = moduleID;
-        this.image = image; 
-        this.link = link;
-        this.title = title;
-    } 
-    
-    function MainPageObject(request, headers, method, extraInfo, loadJavascript, javaScript, output){
-        this.request = request;
-        this.headers = headers;
-        this.method = method;
-        this.extraInfo = extraInfo;
-        this.loadJavascript = loadJavascript; 
-        this.javaScript = javaScript;
-        this.output = output;
-    } 
-    
-    function shuffle(a) {
-        var j, x, i; 
-        for (i = a.length - 1; i > 0; i--){
-            j = Math.floor(Math.random() * (i + 1));
-            x = a[i];
-            a[i] = a[j]; 
-            a[j] = x;
-        } 
-        return a;
-    } 
-    var savedData = document.getElementById('katsu-final-data');
-    var parsedJson = JSON.parse(savedData.innerHTML);
-    var moduleID = '11305';
-    var headers = [new Header('', '')]; 
-    var extraInfo = []; 
-    var currentPos = parseInt(parsedJson.extraInfo[0].value);
-    var mainPageObject;
-    var output = [];
-    var sectionName = '';
-    var nextRequest = '';
-    if (currentPos != 0) { 
-        output = parsedJson.output;
-    }
-     var mangasArray = [];
-    
+    return a;
+}
+var savedData = document.getElementById("katsu-final-data");
+var parsedJson = JSON.parse(savedData.innerHTML);
+var moduleID = "11305";
+var headers = [new Header("", "")];
+var extraInfo = [];
+var currentPos = parseInt(parsedJson.extraInfo[0].value);
+var mainPageObject;
+var output = [];
+var sectionName = "";
+var nextRequest = "";
+try {
+    nextRequest = parsedJson.extraInfo[currentPos + 1].value;
+} catch (e) {
+    console.log(e);
+}
+if (currentPos != 0) {
+    output = parsedJson.output;
+}
+var mangasArray = [];
+data = document.querySelector("#news").querySelectorAll("li");
+for (let x = 0; x < data.length - 1; x++) {
+    let manga = data[x];
+    let image = "https:" + manga.querySelector("div.hottestImage > img").getAttribute("data-src");
+    let link = "https://www.mangaeden.com" + manga.querySelector("div.hottestInfo > a").href;
+    let title = manga.querySelector("div.hottestInfo > a").innerText;
+    mangasArray.push(new MangasArray(moduleID, image, link, title));
+}
+if (parsedJson.request.includes("it")) {
+    sectionName = "Italian";
+} else if (parsedJson.request.includes("eng")) {
+    sectionName = "English";
+}
+output.push(new Output(sectionName, mangasArray));
+for (var x = 0; x < parsedJson.extraInfo.length; x++) {
+    var object = new ExtraInfo(parsedJson.extraInfo[x].value);
+    extraInfo.push(object);
+}
+extraInfo[0].value = "" + (currentPos + 1);
+mainPageObject = new MainPageObject(nextRequest, headers, "", extraInfo, "", "", output);
+var finalJson = JSON.stringify(mainPageObject);
+savedData.innerHTML = finalJson;
 
-     if (parsedJson.request.includes('it')) {
-      data = document.querySelector('#news').querySelectorAll('li');
-      for (let x = 0; x < data.length - 1; x++) {
-          let manga = data[x];
-          let image = 'https:'+manga.querySelector('div.hottestImage > img').getAttribute('data-src');
-          let link = 'https://www.mangaeden.com'+manga.querySelector('div.hottestInfo > a').href;
-          let title = manga.querySelector('div.hottestInfo > a').innerText;
-          mangasArray.push(new MangasArray(moduleID, image, link, title));
-      }
-        sectionName='Italian';
-        nextRequest='https://www.mangaeden.com/eng/';
-     } else if (parsedJson.request.includes('eng')) {
-       sectionName='English';
-     }
-    output.push(new Output(sectionName, mangasArray));
-    for (var x = 0; x < parsedJson.extraInfo.length; x++) {
-        var object = new ExtraInfo(parsedJson.extraInfo[x].value);
-        extraInfo.push(object);
-    } 
-        extraInfo[0].value = '' + (currentPos + 1);
-        mainPageObject = new MainPageObject(nextRequest, headers, '', extraInfo, '', '', output);
-        var finalJson = JSON.stringify(mainPageObject);
-        savedData.innerHTML = finalJson;
     </script>
  </body>
 </html>
