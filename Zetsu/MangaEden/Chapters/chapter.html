@@ -133,7 +133,7 @@
        function ExtraInfo(value) {
            this.value = value;
        } 
-       function Output(link, linkIdentifier, moduleID, isDecodable, headers) {
+       function Output(link, moduleID, headers) {
            this.link = link;
            this.moduleID = moduleID;
            this.headers = headers;
@@ -154,6 +154,22 @@
        var extraInfo = [new ExtraInfo('')];
        var chaptersObject;
        var output = [];
+
+
+       var data = document.querySelector('#image > p').innerText;
+       var amount = document.querySelector('#pageSelect').querySelectorAll('option').length;
+       
+       
+       split1 = data.split('fs');
+       
+       for (x = 0; x<amount; x++) {
+           let split2 = split1[x+1].split(',');
+           let split3 = split2[0].split(':');
+           let slice = split3[1].slice(2, split3[1].length-1);
+           let link = 'https:'+slice;
+           output.push(new Output(link, moduleID, headers));
+       }
+
        chaptersObject = new ChaptersObject('','',headers,extraInfo,'','',output);
        var finalJson = JSON.stringify(chaptersObject);
        savedData.innerHTML = finalJson;
